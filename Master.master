@@ -1,0 +1,914 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Master.master.cs" Inherits="Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en">
+<head runat="server">
+    
+    <meta lang="en-us" />
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-56349819-1', 'auto');
+        ga('send', 'pageview');
+
+</script>
+    
+    <link href="css/green.css" rel="stylesheet" />
+          <!-- Bootstrap Core CSS -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	    <!-- Customizable CSS -->
+        <link href="css/main.css" rel="stylesheet" />
+        <link href="css/green.css" rel="stylesheet" />
+        <link href="css/owl.carousel.css" rel="stylesheet" />
+        <link href="css/owl.transitions.css" rel="stylesheet" />
+		<!--<link rel="stylesheet" href="assets/css/owl.theme.css">-->
+        <link href="css/lightbox.css" rel="stylesheet" />
+        <link href="css/animate.min.css" rel="stylesheet" />
+        <link href="css/rateit.css" rel="stylesheet" />
+        <link href="css/bootstrap-select.min.css" rel="stylesheet" />
+
+		<!-- Demo Purpose Only. Should be removed in production -->
+        <link href="css/config.css" rel="stylesheet" />
+        <link href="css/green.css" rel="stylesheet" />
+        <link href="css/blue.css" rel="stylesheet" />
+        <link href="css/red.css" rel="stylesheet" />
+        <link href="css/orange.css" rel="stylesheet" />
+        <link href="css/dark-green.css" rel="stylesheet" />
+		<!-- Demo Purpose Only. Should be removed in production : END -->
+
+		
+		<!-- Icons/Glyphs -->
+        <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- Fonts --> 
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link href="Images/images/T.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+    <%--<style type="text/css">
+        #u_0_4 {
+        color:#fff !important;
+        }
+    </style>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+		<!-- ============================================== HEADER ============================================== -->
+<header class="header-style-1">
+
+	<!-- ============================================== TOP MENU ============================================== -->
+<div class="top-bar animate-dropdown">
+	<div class="container">
+		<div class="header-top-inner">
+			<div class="cnt-account">
+				<ul class="list-unstyled">
+					<%--<li><a href="#">My Account</a></li>
+					<li><a href="#">Wishlist</a></li>
+					<li><a href="#">My Cart</a></li>
+					<li><a href="#">Checkout</a></li>--%>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="DealerInfo.aspx">Dealership Enquiry From</a></li>
+                    
+                    
+					<li><a href="Login.aspx"><i class="icon fa fa-sign-in"></i>Seller Log in</a></li>
+                    <li><a href="http://www.pushvam.com/Account/Login.aspx"><i class="icon fa fa-sign-in"></i>Dealer Log in </a></li>
+				</ul>
+			</div><!-- /.cnt-account -->
+
+			<div class="cnt-block">
+				<ul class="list-unstyled list-inline">
+                      <li class="phone inline">
+        <i class="icon fa fa-phone" style="color:#d74142;font-size: 16px; vertical-align: middle;"></i>&nbsp; (+91) 9229120786, 9229121786
+    </li>
+    <li class="contact inline">
+        <i class="icon fa fa-envelope" style="color:#d74142;font-size: 14px; vertical-align: middle;"></i>&nbsp; hrcproduct@gmail.com
+    </li>
+					<%--<li class="dropdown dropdown-small">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="key">currency :</span><span class="value">USD </span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">USD</a></li>
+							<li><a href="#">INR</a></li>
+							<li><a href="#">GBP</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown dropdown-small">
+						<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span class="key">language :</span><span class="value">English </span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">English</a></li>
+							<li><a href="#">French</a></li>
+							<li><a href="#">German</a></li>
+						</ul>
+					</li>--%>
+				</ul><!-- /.list-unstyled -->
+			</div><!-- /.cnt-cart -->
+			<div class="clearfix"></div>
+		</div><!-- /.header-top-inner -->
+	</div><!-- /.container -->
+</div><!-- /.header-top -->
+<!-- ============================================== TOP MENU : END ============================================== -->
+	<div class="main-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+					<!-- ============================================================= LOGO ============================================================= -->
+                    <div class="logo">
+	<a href="LoveLife.aspx">
+		<img src="Images/logo-tv.png" alt="logo" style="width:220px;">
+	</a>
+</div><!-- /.logo -->
+<!-- ============================================================= LOGO : END ============================================================= -->				</div><!-- /.logo-holder -->
+				<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder">
+					<%--<div class="contact-row">
+    <div class="phone inline">
+        <i class="icon fa fa-phone"></i> (400) 888 888 868
+    </div>
+    <div class="contact inline">
+        <i class="icon fa fa-envelope"></i> saler@unicase.com
+    </div>
+</div>--%><!-- /.contact-row -->
+<!-- ============================================================= SEARCH AREA ============================================================= -->
+<div class="search-area">
+
+        <div class="control-group">
+
+            <%--<ul class="categories-filter animate-dropdown">
+                <li class="dropdown">
+
+                    <a class="dropdown-toggle"  data-toggle="dropdown" href="indexe96c.html?page=category-grid">Categories <b class="caret"></b></a>
+
+                    <ul class="dropdown-menu" role="menu" >
+                        <li class="menu-header">Computer</li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="indexe96c.html?page=category-grid">- Laptops</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="indexe96c.html?page=category-grid">- Tv & audio</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="indexe96c.html?page=category-grid">- Gadgets</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="indexe96c.html?page=category-grid">- Cameras</a></li>
+
+                    </ul>
+                </li>
+            </ul>--%>
+
+            <input class="search-field" placeholder="Search here..." />
+
+            <a class="search-button" href="#" ></a>    
+
+        </div>
+
+</div><!-- /.search-area -->
+<!-- ============================================================= SEARCH AREA : END ============================================================= -->				</div>
+            
+            </div><!-- /.row -->
+
+		</div><!-- /.container -->
+
+	</div><!-- /.main-header -->
+
+	<!-- ============================================== NAVBAR ============================================== -->
+<div class="header-nav animate-dropdown">
+    <div class="container">
+        <div class="yamm navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="nav-bg-class">
+                <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+	<div class="nav-outer">
+		<ul class="nav navbar-nav">
+			<li class="dropdown yamm">
+				<a href="LoveLife.aspx" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">HEALTH</a>
+                <ul class="dropdown-menu">
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="LoveLife.aspx">Love Life</a></li>
+                    <li><a href="WinPower.aspx">Win Power</a></li>
+                    <li><a href="WinDiabonil.aspx">Win Diabonil</a></li>
+                    <li><a href="Windiabonilplus.aspx">Win Diabonil Plus</a></li>
+                   <%-- <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+			<li class="dropdown yamm">
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">MOBILE & IT</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="SpyPenCamera.aspx">Spy Pen Camera</a></li>
+                    <%--<li><a href="#">Power Supply Testers Sound </a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+
+			<li class="dropdown">
+				
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">CLOTHING
+				  <%-- <span class="menu-label hot-menu hidden-xs">hot</span>--%>
+				</a>
+            <ul class="dropdown-menu">
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="ComfortBra.aspx">New Comfort Bra</a></li>
+                    <%--<li><a href="#">Power Supply Testers Sound </a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+			<li class="dropdown hidden-sm">
+				
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">FOOTWEAR
+				    <%--<span class="menu-label new-menu hidden-xs">new</span>--%>
+				</a>
+			</li>
+
+			<li class="dropdown hidden-sm">
+				<a href="#">ACCESSARIES</a>
+			</li>
+
+			<li class="dropdown">
+				<a href="#">JEWELLERY</a>
+			</li>
+
+            <li class="dropdown">
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">BEAUTY</a>
+                 <ul class="dropdown-menu">
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="Herbalhairoil.aspx">Win Hair Oil</a></li>
+                    <%--<li><a href="#">Power Supply Testers Sound </a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+
+            <li class="dropdown">
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">HOME & KITCHEN</a>
+                <ul class="dropdown-menu"><%--style="margin-left:-580px;"--%>
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="RotiMaker.aspx">Roti Maker</a></li>
+                    <%--<li><a href="#">Power Supply Testers Sound </a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+
+             <li class="dropdown">
+				<a href="#" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">APPLIANCES</a>
+					<ul class="dropdown-menu"><%--style="margin-left:-610px;"--%>
+					<li>
+						<div class="yamm-content">
+    <div class="row">
+        <div class="col-sm-12">
+           <%--<div class="col-xs-12 col-sm-12 col-md-4">--%>
+                <h2 class="title"><%--Laptops &amp; Notebooks--%></h2>
+                <ul class="links">
+                    <li><a href="MaxxPowerSaver.aspx">MAXX Power Saver</a></li>
+                    <%--<li><a href="#">Power Supply Testers Sound </a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            <%--</div>--%><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Computers &amp; Laptops--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Computer Cases &amp; Accessories</a></li>
+                    <li><a href="#">CPUs, Processors</a></li>
+                    <li><a href="#">Fans, Heatsinks &amp; Cooling</a></li>
+                    <li><a href="#">Graphics, Video Cards</a></li>
+                    <li><a href="#">Interface, Add-On Cards</a></li>
+                    <li><a href="#">Laptop Replacement Parts</a></li>
+                    <li><a href="#">Memory (RAM)</a></li>
+                    <li><a href="#">Motherboards</a></li>
+                    <li><a href="#">Motherboard &amp; CPU Combos</a></li>
+                    <li><a href="#">Motherboard Components &amp; Accs</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+
+            <div class="col-xs-12 col-sm-12 col-md-4">
+                <h2 class="title"><%--Dekstop Parts--%></h2>
+                <ul class="links">
+                    <%--<li><a href="#">Power Supplies Power</a></li>
+                    <li><a href="#">Power Supply Testers Sound</a></li>
+                    <li><a href="#">Sound Cards (Internal)</a></li>
+                    <li><a href="#">Video Capture &amp; TV Tuner Cards</a></li>
+                    <li><a href="#">Other</a></li>--%>
+                </ul>
+            </div><!-- /.col -->
+        </div>
+    </div><!-- /.row -->
+</div><!-- /.yamm-content -->					</li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<%--<a href="#" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">Pages</a>--%>
+				<%--<ul class="dropdown-menu pages">
+					<li><a href="index.php?page=home">Home I</a></li>
+					<li><a href="index.php?page=home2">Home II</a></li>
+					<li><a href="index.php?page=category">Category</a></li>
+					<li><a href="index.php?page=category-2">Category II</a></li>
+					<li><a href="index.php?page=detail">Detail</a></li>
+					<li><a href="index.php?page=detail2">Detail II</a></li>
+					<li><a href="index.php?page=shopping-cart">Shopping Cart Summary</a></li>
+					<li><a href="index.php?page=checkout">Checkout</a></li>
+					<li><a href="index.php?page=blog">Blog</a></li>
+					<li><a href="index.php?page=blog-details">Blog Detail</a></li>
+					<li><a href="index.php?page=contact">Contact</a></li>
+					<li><a href="index.php?page=homepage1">Homepage 1</a></li>
+					<li><a href="index.php?page=homepage2">Homepage 2</a></li>
+					<li><a href="index.php?page=home-furniture">Home Furniture</a></li>
+					
+				</ul>--%>
+			</li>
+			
+		</ul><!-- /.navbar-nav -->
+		<div class="clearfix"></div>				
+	</div><!-- /.nav-outer -->
+</div><!-- /.navbar-collapse -->
+
+
+            </div><!-- /.nav-bg-class -->
+        </div><!-- /.navbar-default -->
+    </div><!-- /.container-class -->
+
+</div><!-- /.header-nav -->
+<!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>
+
+<!-- ============================================== HEADER : END ============================================== -->
+<div class="breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-inner">
+			<ul class="list-inline list-unstyled">
+				<%--<li><a href="#">Home</a></li>
+				<li><a href="#">Woman</a></li>
+				<li class="active">Samsung Galaxy S4 32GB White</li>--%>
+			</ul>
+		</div><!-- /.breadcrumb-inner -->
+	</div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+<div class="body-content outer-top-xs">
+	<div class="container">
+        <asp:ContentPlaceHolder runat="server" ID="MainContent"></asp:ContentPlaceHolder>
+	</div><!-- /.container -->
+</div><!-- /.body-content -->
+
+<!-- ============================================================= FOOTER ============================================================= -->
+<footer class="footer color-bg" id="footer">
+	 <%-- <div class="links-social inner-top-sm">
+        <div class="container">
+            <div class="row">
+            	<!-- /.col -->
+
+            	<div class="col-xs-12 col-sm-6 col-md-3">
+            		 <!-- ============================================================= CONTACT TIMING============================================================= -->
+<div class="contact-timing">
+	<div class="module-heading">
+		<h4 class="module-title">Show Timing</h4>
+	</div><!-- /.module-heading -->
+
+	<div class="module-body outer-top-xs">
+		<div class="table-responsive">
+			<table class="table">
+				<tbody>
+					<tr><td>Monday-Friday:</td><td class="pull-right">08.00 To 18.00</td></tr>
+					<tr><td>Saturday:</td><td class="pull-right">09.00 To 20.00</td></tr>
+					<tr><td>Sunday:</td><td class="pull-right">10.00 To 20.00</td></tr>
+				</tbody>
+			</table>
+		</div><!-- /.table-responsive -->
+		<p class="contact-number">Hot Line:(400)888 868 848</p>
+	</div><!-- /.module-body -->
+</div><!-- /.contact-timing -->
+<!-- ============================================================= CONTACT TIMING : END ============================================================= -->            	</div><!-- /.col -->
+
+            	<div class="col-xs-12 col-sm-6 col-md-3">
+            		 <!-- ============================================================= LATEST TWEET============================================================= -->
+<div class="latest-tweet">
+	<div class="module-heading">
+		<h4 class="module-title">Upcoming Products</h4>
+	</div><!-- /.module-heading -->
+
+	<div class="module-body outer-top-xs">
+       <div class="re-twitter">
+            <div class="comment media">
+                <div class="pull-left">
+                    <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <a href="#">@laurakalbag</a> As a result of your previous recommendation :) 
+                    <span class="time">
+                        12 hours ago
+                    </span>
+                </div>
+            </div>
+           
+        </div>
+        <div class="re-twitter">
+            <div class="comment media">
+                <div class="pull-left">
+                    <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <a href="#">@laurakalbag</a> As a result of your previous recommendation :) 
+                    <span class="time">
+                        12 hours ago
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.module-body -->
+</div><!-- /.contact-timing -->
+<!-- ============================================================= LATEST TWEET : END ============================================================= -->            	</div><!-- /.col -->
+
+            	<div class="col-xs-12 col-sm-6 col-md-3">
+            		 <!-- ============================================================= INFORMATION============================================================= -->
+<div class="contact-information">
+	<div class="module-heading">
+		<h4 class="module-title">information</h4>
+	</div><!-- /.module-heading -->
+
+	<div class="module-body outer-top-xs">
+        <ul class="toggle-footer" style="">
+            <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>868 Any Stress,Burala Casi,Picasa USA.</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>(400) 0888 888 888<br>(400) 888 888 888</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <span><a href="#">Contact @Unicase.com</a></span><br>
+                    <span><a href="#">Sale @Unicase.com</a></span>
+                </div>
+            </li>
+              
+            </ul>
+    </div><!-- /.module-body -->
+</div><!-- /.contact-timing -->
+<!-- ============================================================= INFORMATION : END ============================================================= -->            	</div>
+  <div class="col-xs-12 col-sm-6 col-md-3">
+            		 <!-- ============================================================= INFORMATION============================================================= -->
+<div class="contact-information">
+	<div class="module-heading">
+		<h4 class="module-title">information</h4>
+	</div><!-- /.module-heading -->
+
+	<div class="module-body outer-top-xs">
+        <ul class="toggle-footer" style="">
+            <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>868 Any Stress,Burala Casi,Picasa USA.</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <p>(400) 0888 888 888<br>(400) 888 888 888</p>
+                </div>
+            </li>
+
+              <li class="media">
+                <div class="pull-left">
+                     <span class="icon fa-stack fa-lg">
+                      <i class="fa fa-circle fa-stack-2x"></i>
+                      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+                <div class="media-body">
+                    <span><a href="#">Contact @Unicase.com</a></span><br>
+                    <span><a href="#">Sale @Unicase.com</a></span>
+                </div>
+            </li>
+              
+            </ul>
+    </div><!-- /.module-body -->
+</div><!-- /.contact-timing -->
+<!-- ============================================================= INFORMATION : END ============================================================= -->            	</div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div>--%><!-- /.links-social -->
+
+    <div class="footer-bottom inner-bottom-sm">
+        <div class="container">
+           <div class="row">
+                <div style="float: left; width: 40%;">
+                     <div style="width: 45%;" class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">CORPORATE</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Career</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Product Enquiry</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+
+                    <div style="width:50%;" class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">Policies &amp; Information</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Terms and Conditions</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                        </ul>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+                    
+
+                    <div style="width: 100%; margin-top: 3%;" class="col-xs-12 col-sm-6 col-md-3">
+  
+                       <div style="float: left; margin-bottom: 8px;" class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">Connect With Us</h4>
+                   </div>
+                        <div style="float: left; margin-left: 20px; margin-top: -10px;" class="module-body">
+                        <ul class="social">
+                        <li class="dribbble">
+                            <a href="http://dribbble.com">
+                                dribbble</a>
+                        </li>
+
+                        <li class="facebook">
+                            <a href="http://www.facebook.com">facebook</a>
+                        </li>
+
+                        <li class="pinterest">
+                            <a href="https://www.pinterest.com">pinterest</a>
+                        </li>
+
+                        <li class="twitter">
+                            <a href="https://twitter.com/">twitter</a>
+                        </li>
+                    </ul>
+                             </div><!-- /.module-body -->
+                       <div style="clear:both;"></div>
+                       
+                       
+                       
+                       <div style="float:left;" class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">Watch On these famous Channels</h4>
+                   </div>
+                        <div style="float: left; margin-top: -10px;" class="module-body">
+                      <img width="67" height="38" alt="Ch1" style="opacity:1;" src="Images/images/social/sangeet_bhojpuri.jpg">
+                            <img width="67" height="38" alt="Ch2" style="opacity:1;margin-left:17px;" src="Images/images/social/music_india.jpg">
+                            <img width="67" height="38" alt="Ch3" style="opacity:1;margin-left:17px;" src="Images/images/social/mahua.jpg">
+                             </div><!-- /.module-body -->
+                       <div style="clear:both;"></div>
+   
+                </div><!-- /.col -->
+                </div>
+               <div style="float: right; width: 60%;">
+                 <div class="col-xs-12 col-sm-6 col-md-3" style="width:50%;float:left;">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">Facebook Widget</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                        <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FTvshoppee-Online-Shopping-In-India%2F472282429459616&amp;width&amp;height=290&amp;colorscheme=dark&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->    
+                   <div class="col-xs-12 col-sm-6 col-md-3" style="width:50%;float:right;">
+                    <div class="module-heading outer-bottom-xs">
+                        <h4 class="module-title">Twitter Widget</h4>
+                    </div><!-- /.module-heading -->
+
+                    <div class="module-body">
+                     <a class="twitter-timeline" href="https://twitter.com/tvshoppee123" data-widget-id="532856124643373058" style="width:100%;">Tweets by Tvshoppee</a>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    </div><!-- /.module-body -->
+                </div><!-- /.col -->
+               </div>
+            </div>
+        </div>
+
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-padding">
+                <div class="copyright">
+                   Copyright &copy; 2014
+                    <a href="index.php?page=home">Tvshoppee</a>
+                    - All rights Reserved
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 no-padding">
+                <div class="clearfix payment-methods">
+                    <ul>
+                       <%-- <li><img alt="" src="assets/images/payments/1.png"></li>
+                        <li><img alt="" src="assets/images/payments/2.png"></li>
+                        <li><img alt="" src="assets/images/payments/3.png"></li>
+                        <li><img alt="" src="assets/images/payments/4.png"></li>
+                        <li><img alt="" src="assets/images/payments/5.png"></li>--%>
+                    </ul>
+                </div><!-- /.payment-methods -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->
+
+
+
+	<!-- For demo purposes &ndash; can be removed on production : End -->
+
+	<!-- JavaScripts placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-hover-dropdown.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/echo.min.js"></script>
+        <script src="js/jquery.easing-1.3.min.js"></script>
+        <script src="js/bootstrap-slider.min.js"></script>
+        <script src="js/jquery.rateit.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/bootstrap-select.min.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+	<!-- For demo purposes &ndash; can be removed on production -->
+        <script src="js/switchstylesheet/switchstylesheet.js"></script>
+	
+	<script>
+	    $(document).ready(function () {
+	        $(".changecolor").switchstylesheet({ seperator: "color" });
+	        $('.show-theme-options').click(function () {
+	            $(this).parent().toggleClass('open');
+	            return false;
+	        });
+	    });
+
+	    $(window).bind("load", function () {
+	        $('.show-theme-options').delay(2000).trigger('click');
+	    });
+	</script>
+	<!-- For demo purposes &ndash; can be removed on production : End -->
+
+	
+
+
+<%--<div style="display: none;" id="lightboxOverlay" class="lightboxOverlay"></div>
+        <div style="display: none;" id="lightbox" class="lightbox"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src="">
+            <div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a>
+
+                                                                                                    </div></div></div>
+            <div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
+                <div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div>--%>
+    </form>
+</body>
+</html>

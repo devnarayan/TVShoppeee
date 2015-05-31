@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  
+    <siteMapNode url="~/Home.aspx" title="Home"  >
+        <siteMapNode url="~/LoveLife.aspx" title="Love Life" />
+        <siteMapNode url="~/WinPower.aspx" title="Win Power" />
+      <siteMapNode url="~/WinDiabonil.aspx" title="Win Diabonil" />
+      <siteMapNode url="~/Windiabonilplus.aspx" title="Win Diabonil Plus" />
+    </siteMapNode>
+</siteMap>
+
+
+
+
+
+
+
+
